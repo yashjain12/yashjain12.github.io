@@ -1,16 +1,13 @@
 # Data Science Student
 
 #### Skills (Programming):
-### Python (NumPy, Pandas, Scikit-learn, Keras), Excel, SQL, Java, MATLAB, R, Lua
+##### Python (NumPy, Pandas, Scikit-learn, Keras), Excel, SQL, Java, MATLAB, R, Lua
 #### Skills (Statistics/Machine Learning):
-### Hybrid and Deep Learning Recommendation Engines involving Natural Language Processing (NLPs) and Text Vectorization
-• Biometric Data Scraping and simulating Data Generation
-• Outlier/Anomaly Detection Models and Variance Reduction
+##### - Hybrid and Deep Learning Recommendation Engines involving Natural Language Processing (NLPs) and Text Vectorization
+##### - Biometric Data Scraping and simulating Data Generation
+##### - Outlier/Anomaly Detection Models and Variance Reduction
+##### - KNN, PCA, Decision Trees, Kernel SVM, Regression
 
-• Experience in Python (NumPy, Pandas, Scikit-learn, Keras), Excel, SQL, Java, MATLAB, R, and Lua
-• Hybrid and Deep Learning Recommendation Engines involving Natural Language Processing (NLPs) and Text Vectorization
-• Biometric Data Scraping and simulating Data Generation
-• Outlier/Anomaly Detection Models and Variance Reduction
 Yash Kumar Jain 	6 Charles Ct, Edison, NJ 08820
 (848) 256-9108     •     creativeyashjain@gmail.com     •     github.com/yashjain12    •     linkedin.com/in/yash-jain-623157223
 Profile
