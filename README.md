@@ -1,8 +1,9 @@
 # Data Science Student
 
-#### Skills:
-- Python (NumPy, Pandas, Scikit-learn, Keras), Excel, SQL, Java, MATLAB, R, and Lua
-• Hybrid and Deep Learning Recommendation Engines involving Natural Language Processing (NLPs) and Text Vectorization
+#### Skills (Programming):
+### Python (NumPy, Pandas, Scikit-learn, Keras), Excel, SQL, Java, MATLAB, R, Lua
+#### Skills (Statistics/Machine Learning):
+### Hybrid and Deep Learning Recommendation Engines involving Natural Language Processing (NLPs) and Text Vectorization
 • Biometric Data Scraping and simulating Data Generation
 • Outlier/Anomaly Detection Models and Variance Reduction
 
