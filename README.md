@@ -1,9 +1,9 @@
 # Data Science Student
 
 #### Skills
-##### Programming: Python (NumPy, Pandas, Scikit-learn, Keras), Excel, SQL, Java, MATLAB, R, Lua
-##### Statistics/ML: Anomaly Detection, Variance Reduction, Data Simulation, KNN, PCA, Decision Trees, Kernel SVM, Regression
-##### Deep Learning: Hybrid Recommendation Engines involving Natural Language Processing (NLPs) and Text Vectorization, CNNs, RNNs
+- **Programming**: Python (NumPy, Pandas, Scikit-learn, Keras), Excel, SQL, Java, MATLAB, R, Lua
+- **Statistics/ML**: Anomaly Detection, Variance Reduction, Data Simulation, KNN, PCA, Decision Trees, Kernel SVM, Regression
+- **Deep Learning**: Hybrid Recommendation Engines involving Natural Language Processing (NLPs) and Text Vectorization, CNNs, RNNs
 
 ## Education
 - B.S., Applied Statistics | New Jersey Institute of Technology (_Sept 2021-Present_)
@@ -22,38 +22,16 @@
 - Used **Crunchbase API** to retrieve information of 303 companies in North Carolina and put the information into an organized **Excel** Spreadsheet with companies' names, phone numbers, email addresses, and websites. 
 - Predicted total exports of goods and services in the U.S. International Trade in 2024, 2025, and 2026 using data from the U.S. Bureau of Economic Analysis (BEA). The method of **Cubic Splines** was used to make such predictions in specific categories of goods and services, such as Travel, Food, and Transport. Performed in **Excel**.
 
-Yash Kumar Jain 	6 Charles Ct, Edison, NJ 08820
-(848) 256-9108     •     creativeyashjain@gmail.com     •     github.com/yashjain12    •     linkedin.com/in/yash-jain-623157223
-Profile
 
 
 Data Science student with a concentration in Applied Statistics at the Albert Dorman Honors College, NJIT.
 Eager to extend my knowledge of statistical methods. 3 years of experience in interpreting data in the healthcare and sports industry to build predictive models that provide analytic solutions and detect anomalies. Deeply interested in learning algorithmic trading methods and statistical techniques for financial management.
 
+## Projects
+### (WIP) NBA 3D Shotchart Visualizer (Python)
 
-Education
-
-
-Albert Dorman Honors College, New Jersey Institute of Technology 	Sept 2021 - Dec 2024
-B.S. in Data Science, Applied Statistics Concentration
-• GPA: 3.62/4.0
-• Relevant Coursework: Applied Numerical Methods in Python, Database System Design and Management in SQL, Numerical
-    Linear Algebra, Data Science in Python, Statistical Methods in R, Stochastic Simulation and Processes, Time Series Analysis
-• Honors: Dorman Honors Scholar (2021, 2022, 2023), Dean’s List (2021, 2022, 2023)
-
-
-
-
-John P. Stevens High School 	Sept 2017 - Jun 2021
-• GPA: 3.85/4.0
-• SAT: 1530
-
-
-
-Projects
-
-
-NBA Predictor
+### NBA Predictor
+Kaggle 
 kaggle.com/code/ykjain2003/nbapredictor?scriptVersionId=122265671
 • Created Python model from past NBA seasons to predict games with 65.2% accuracy using ridge regression and time series.
 • Concluded that the past 25 games were the best metric to determine the success of an NBA team.
