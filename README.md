@@ -6,9 +6,10 @@
 - **Deep Learning**: Hybrid Recommendation Engines involving Natural Language Processing (NLPs) and Text Vectorization, CNNs, RNNs
 
 ## Education
-- B.S., Applied Statistics | New Jersey Institute of Technology (_Sept 2021-Present_)
+- B.S., Applied Statistics | NJIT (_Sept 2021 - Present_)
     - GPA: 3.62/4.0
     - Relevant Coursework: Statistical Methods in Data Science, Database System Design and Management in SQL, Numerical Linear Algebra, Data Science in Python, Stochastic Simulation and Processes, Time Series Analysis, Partial Differential Equations, Real Analysis
+
 - John P. Stevens High School (_Sept 2017 - Jun 2021_)
 
 ## Work Experience
