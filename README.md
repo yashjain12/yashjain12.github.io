@@ -1,12 +1,9 @@
 # Data Science Student
 
-#### Skills (Programming):
-##### Python (NumPy, Pandas, Scikit-learn, Keras), Excel, SQL, Java, MATLAB, R, Lua
-#### Skills (Statistics/Machine Learning):
-##### - Hybrid and Deep Learning Recommendation Engines involving Natural Language Processing (NLPs) and Text Vectorization
-##### - Biometric Data Scraping and simulating Data Generation
-##### - Outlier/Anomaly Detection Models and Variance Reduction
-##### - KNN, PCA, Decision Trees, Kernel SVM, Regression
+#### Skills
+##### Programming: Python (NumPy, Pandas, Scikit-learn, Keras), Excel, SQL, Java, MATLAB, R, Lua
+##### Statistics/ML: Anomaly Detection, Variance Reduction, Data Simulation, KNN, PCA, Decision Trees, Kernel SVM, Regression
+##### Deep Learning: Hybrid Recommendation Engines involving Natural Language Processing (NLPs) and Text Vectorization, CNNs, RNNs
 
 ## Education
 - B.S., Applied Statistics | New Jersey Institute of Technology (_Sept 2021-Present_)
