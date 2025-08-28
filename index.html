@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Projects</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Personal site and project portfolio." />
+</head>
+<body>
+  <main class="page">
+    <!-- Left column -->
+    <aside class="sidebar">
+      <h1 class="name">Your Name</h1>
+
+      <img class="headshot" src="assets/headshot.jpg" alt="Your headshot" />
+
+      <a class="big-link" href="https://github.com/yourusername" target="_blank" rel="noopener">
+        View my GitHub
+      </a>
+
+      <ul class="links">
+        <li><a href="mailto:you@example.com">you@example.com</a></li>
+        <li><a href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+
+      <p class="tiny">Hosted on GitHub Pages</p>
+    </aside>
+
+    <!-- Right column -->
+    <section class="content">
+      <header class="intro">
+        <h2>Hi! Welcome to my GitHub.</h2>
+        <p class="edu"><strong>MS in Financial Mathematics</strong> — University of Chicago (expected 2026)</p>
+        <p class="edu"><strong>BS in Mathematics & Economics</strong> — Your Undergrad University</p>
+      </header>
+
+      <section class="projects">
+        <h3>Projects</h3>
+
+        <article class="project">
+          <a class="project-title" href="https://github.com/yourusername/alpha-signal" target="_blank" rel="noopener">
+            Regime-Aware Alpha Signal & Cost-Aware Backtester
+          </a>
+          <p class="project-desc">
+            Fama-French factors + rolling OLS + regime clustering. Converts time-varying alpha into tradeable weights with
+            next-open execution and per-ticker cost model.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>CRSP</li><li>Fama-French</li><li>StatsModels</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <a class="project-title" href="https://github.com/yourusername/pairs-trading" target="_blank" rel="noopener">
+            Regime-Adaptive PCA Statistical Arbitrage
+          </a>
+          <p class="project-desc">
+            PCA basket construction with volatility-state gating and spread monitoring; robust entry/exit with transaction costs.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>PCA</li><li>Backtesting</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <a class="project-title" href="https://github.com/yourusername/iv-calc" target="_blank" rel="noopener">
+            Automated Implied Volatility Calculator
+          </a>
+          <p class="project-desc">
+            Black-Scholes IV solver (Newton) with greeks; batch jobs and CSV export for option chains.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>Options</li><li>Numerical Methods</li>
+          </ul>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
