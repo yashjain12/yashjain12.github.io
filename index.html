@@ -1,51 +1,139 @@
-/* === Vertical projects stack (new block) === */
-.projects-vertical{
-  display:flex;
-  flex-direction:column;
-  gap:22px;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- (Optional) later if you want README rendering, uncomment marked below -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+</head>
+<body>
+  <header class="wrap hero">
+    <div class="hero__left">
+      <img src="assets/headshot.jpg" alt="Your headshot" class="avatar"/>
+    </div>
+    <div class="hero__right">
+      <h1>Yash Jain</h1>
+      <p class="subtitle">MS in Financial Mathematics, University of Chicago (FinMath)</p>
+      <p class="tagline">Quant research • Quant trading • Risk Management • Data Analyis</p>
+      <nav class="nav">
+        <a>yashjain@uchicago.edu</a>
+        <a>+1 (848) 256-9108</a>
+        <a href="https://github.com/yashjain12" target="_blank">GitHub</a>
+      </nav>
+    </div>
+  </header>
 
-/* meta row above titles (label + year) */
-.card__meta{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:.25rem;
-}
+  <!-- QUANT FINANCE -->
+<!-- QUANT FINANCE -->
+<section id="quant" class="section">
+  <h2 class="section__title">Quant Finance &amp; Portfolio Research</h2>
 
-/* “chip” matches your .badge look */
-.chip{
-  background:rgba(109,176,255,.14);
-  color:var(--brand);
-  padding:3px 8px;
-  border-radius:999px;
-  font-size:12px;
-  border:1px solid var(--border);
-}
+  <div class="projects-vertical">
+    <!-- Project 1 -->
+    <article class="card">
+      <div class="card__meta">
+        <span class="chip">Factor Models</span>
+        <span class="year">2025</span>
+      </div>
+      <h3 class="card__title">Fama–French Alpha Signal Generation</h3>
+      <ul class="bullets">
+        <li>Built an alpha signal using the Fama–French 5-Factor model, applying a Bayesian process with time-varying estimates of risk exposures (betas) and outperformance (alpha); categorized signals among market regimes.</li>
+        <li>Designed a pipeline to turn model alpha signals into portfolio trades, including realistic transaction cost modeling.</li>
+        <li>Backtested the strategy from 2014–2025 by dynamically allocating portfolio weights to U.S. equities from alpha signals, achieving an 8.5% annual growth rate; applies MCMC for evolving alpha estimates across market regimes.</li>
+      </ul>
+      <!-- Optional buttons
+      <div class="card__links">
+        <a class="btn" href="#" target="_blank">Code</a>
+        <a class="btn btn--ghost" href="#">Report</a>
+      </div> -->
+    </article>
 
-/* year on the right */
-.year{
-  color:var(--muted);
-  font-size:12px;
-  font-variant-numeric:tabular-nums;
-}
+    <!-- Project 2 -->
+    <article class="card">
+      <div class="card__meta">
+        <span class="chip">Derivatives</span>
+        <span class="year">2025</span>
+      </div>
+      <h3 class="card__title">Implied Volatility Calculator for Options</h3>
+      <ul class="bullets">
+        <li>Implemented Black-Scholes European call option pricing and calculated higher-order Greeks (vega, volga, and ultima) to calculate implied volatility using Newton’s method and create volatility surface curves.</li>
+        <li>Automated web scraping of live market data with Selenium and asynchronous execution via ThreadPoolExecutor.</li>
+        <li>Enhanced root-finding using a third-order Taylor expansion to address convergence and zero-division edge cases.</li>
+      </ul>
+      <!-- Optional buttons
+      <div class="card__links">
+        <a class="btn" href="#" target="_blank">Code</a>
+        <a class="btn btn--ghost" href="#">Demo</a>
+      </div> -->
+    </article>
+  </div>
+</section>
 
-/* section title alt class used by the new markup */
-.section__title{
-  margin:0 0 14px;
-  font-size:clamp(1.4rem,2.2vw,2rem);
-}
 
-/* card title in the new markup */
-.card__title{
-  margin:.5rem 0 .25rem;
-  font-size:20px; /* tweak to taste */
-}
 
-/* bullets for the project descriptions */
-.bullets{
-  margin:.5rem 0 0 1.15rem;
-  color:var(--muted);
-  line-height:1.45;
-}
-.bullets li{ margin:.35rem 0; }
+  <!-- ML & CLOUD -->
+  <section id="ml" class="wrap section">
+    <h2>Machine Learning & Cloud Systems</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="card__hdr">
+          <span class="badge">ML + AWS</span>
+          <span class="date">Jan 2025 – Present</span>
+        </div>
+        <h3>Stock Investment Model (WIP)</h3>
+        <p>
+          Random Forest + time-series features; automated ETL, training, and
+          inference on AWS (SageMaker, Lambda). Backtests + daily retrains.
+        </p>
+        <ul class="bullets">
+          <li>Backtesting with walk-forward splits</li>
+          <li>Deployed model for scheduled predictions</li>
+          <li>Automated feature extraction & model retraining</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- DATA VIZ -->
+  <section id="viz" class="wrap section">
+    <h2>Data Visualization</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="card__hdr">
+          <span class="badge">Visualization</span>
+          <span class="date">Oct–Dec 2024</span>
+        </div>
+        <h3>Interactive 3D NBA Shot Chart</h3>
+        <p>
+          • Implemented Flask, Matplotlib, and Plotly to create user interface to visualize any NBA player's shot chart
+        </p>
+        <p>• Animated in 3D with heat map and efficiency map. Utilized convolution to create a smooth and clean map
+</p>
+        <div class="card__links">
+          <a class="btn" href="https://github.com/yashjain12/3D-Interactive-NBA-shotchart" target="_blank">Code</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="wrap footer">
+    <p>© <span id="y"></span> Your Name · Hosted on GitHub Pages</p>
+  </footer>
+
+  <!-- (Optional) README injection later — see notes below -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // LATER: render README into a modal
+    // Example: load raw README.md → marked → .innerHTML
+    // async function loadReadme(user, repo, branch='main') {
+    //   const url = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/README.md`;
+    //   const md = await (await fetch(url)).text();
+    //   document.querySelector('#readme-modal .content').innerHTML = marked.parse(md);
+    //   document.getElementById('readme-modal').classList.add('open');
+    // }
+  </script>
+</body>
+</html>
