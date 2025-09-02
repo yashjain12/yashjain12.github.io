@@ -1,148 +1,37 @@
 :root{
-  --bg: #ffffff;
-  --ink: #0f172a;        /* slate-900 */
-  --muted: #475569;      /* slate-600 */
-  --primary: #1e3a8a;    /* indigo-900 */
-  --link: #1d4ed8;       /* blue-700 */
-  --card: #f8fafc;       /* slate-50 */
-  --border: #e2e8f0;     /* slate-200 */
+  --bg:#0b1020; --card:#121a31; --ink:#e8eefc; --muted:#9fb0d0;
+  --brand:#6db0ff; --accent:#6ef0c1; --border:#1e2743;
 }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--brand);text-decoration:none}
+.wrap{width:min(1100px,92%);margin:0 auto}
 
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg: #0b1020;
-    --ink: #e5e7eb;
-    --muted: #94a3b8;
-    --primary: #93c5fd;
-    --link: #60a5fa;
-    --card: #0f172a;
-    --border: #1f2937;
-  }
-}
+.hero{display:grid;grid-template-columns:160px 1fr;gap:24px;align-items:center;padding:48px 0}
+.avatar{width:160px;height:160px;border-radius:18px;object-fit:cover;border:2px solid var(--border)}
+h1{margin:0 0 8px}
+.subtitle{margin:0 0 6px;color:var(--muted)}
+.tagline{margin:0 12px 0 0;color:var(--ink)}
+.nav{margin-top:12px;display:flex;gap:14px;flex-wrap:wrap}
+.nav a{padding:6px 10px;border:1px solid var(--border);border-radius:10px}
 
-*{ box-sizing: border-box; }
-html, body{ height:100%; }
-body{
-  margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  line-height: 1.55;
-}
+.section{padding:22px 0 10px}
+.section h2{margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.card__hdr{display:flex;justify-content:space-between;align-items:center}
+.badge{background:rgba(109,176,255,.14);color:var(--brand);padding:3px 8px;border-radius:999px;font-size:12px;border:1px solid var(--border)}
+.date{color:var(--muted);font-size:12px}
+.card h3{margin:0 0 4px;font-size:18px}
+.card p{margin:0;color:var(--ink)}
+.bullets{margin:6px 0 0 18px; color:var(--muted)}
+.card__links{display:flex;gap:8px;margin-top:auto}
+.btn{background:var(--brand);color:#081427;padding:8px 12px;border-radius:10px;font-weight:600}
+.btn--ghost{background:transparent;border:1px solid var(--border);color:var(--ink)}
+.footer{padding:28px 0 48px;color:var(--muted);text-align:center;border-top:1px solid var(--border);margin-top:30px}
 
-.page{
-  max-width: 1100px;
-  margin: 48px auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 40px;
-}
-
-@media (max-width: 900px){
-  .page{
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-}
-
-.sidebar{
-  position: relative;
-}
-
-.name{
-  font-size: 40px;
-  line-height: 1.1;
-  margin: 0 0 16px;
-  color: var(--primary);
-  letter-spacing: 0.2px;
-}
-
-.headshot{
-  width: 100%;
-  max-width: 240px;
-  border-radius: 12px;
-  display: block;
-  border: 1px solid var(--border);
-  background: var(--card);
-  margin: 8px 0 18px;
-}
-
-.big-link{
-  display: inline-block;
-  margin: 6px 0 12px;
-  color: var(--link);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.links{
-  list-style: none;
-  padding: 0;
-  margin: 8px 0 22px;
-}
-.links a{
-  color: var(--link);
-  text-decoration: none;
-}
-.links li + li{ margin-top: 6px; }
-
-.tiny{
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.content{
-  min-width: 0;
-}
-
-.intro h2{
-  font-size: 30px;
-  margin: 0 0 12px;
-}
-
-.edu{
-  margin: 4px 0;
-  color: var(--muted);
-}
-
-.projects h3{
-  margin: 28px 0 16px;
-  font-size: 22px;
-}
-
-.project{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 16px 18px;
-  margin: 14px 0;
-}
-
-.project-title{
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--primary);
-}
-
-.project-desc{
-  margin: 8px 0 10px;
-  color: var(--ink);
-}
-
-.tags{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.tags li{
-  font-size: 12px;
-  color: var(--muted);
-  border: 1px solid var(--border);
-  padding: 3px 8px;
-  border-radius: 999px;
-  background: #fff0;
+/* responsive tweaks */
+@media (max-width:640px){
+  .hero{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .nav{justify-content:center}
 }
