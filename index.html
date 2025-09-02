@@ -1,83 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name | Projects</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Projects</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Personal site and project portfolio." />
+  <!-- (Optional) later if you want README rendering, uncomment marked below -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
 </head>
 <body>
-  <main class="page">
-    <!-- Left column -->
-    <aside class="sidebar">
-      <h1 class="name">Your Name</h1>
+  <header class="wrap hero">
+    <div class="hero__left">
+      <img src="assets/headshot.jpg" alt="Your headshot" class="avatar"/>
+    </div>
+    <div class="hero__right">
+      <h1>Your Name</h1>
+      <p class="subtitle">MS in Financial Mathematics, University of Chicago (FinMath)</p>
+      <p class="tagline">Quant research • Systematic trading • ML & data viz</p>
+      <nav class="nav">
+        <a href="#quant">Quant Finance</a>
+        <a href="#ml">ML & Cloud</a>
+        <a href="#viz">Data Viz</a>
+        <a href="https://github.com/YOUR-USERNAME" target="_blank">GitHub</a>
+        <a href="mailto:you@domain.com">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-      <img class="headshot" src="assets/headshot.jpg" alt="Your headshot" />
+  <!-- QUANT FINANCE -->
+  <section id="quant" class="wrap section">
+    <h2>Quant Finance & Portfolio Research</h2>
+    <div class="grid">
+      <!-- Alpha/Beta/Regimes -->
+      <article class="card">
+        <div class="card__hdr">
+          <span class="badge">Factor Models</span>
+          <span class="date">2025</span>
+        </div>
+        <h3>Regime-Adaptive Alpha/Beta (Fama-French + regimes)</h3>
+        <p>
+          Rolling OLS on FF5+MOM, time-varying α/β, K-means regime offsets, and
+          cost-aware next-open execution. Portfolio weights mapped from α signal.
+        </p>
+        <div class="card__links">
+          <a class="btn" href="https://github.com/YOUR-USERNAME/alpha-beta-regime" target="_blank">Code</a>
+          <a class="btn btn--ghost" href="reports/alpha.html">Report</a>
+        </div>
+      </article>
 
-      <a class="big-link" href="https://github.com/yourusername" target="_blank" rel="noopener">
-        View my GitHub
-      </a>
+      <!-- Options IV Calculator -->
+      <article class="card">
+        <div class="card__hdr">
+          <span class="badge">Derivatives</span>
+          <span class="date">2025</span>
+        </div>
+        <h3>Options Implied Volatility Calculator</h3>
+        <p>
+          IV solver & greeks with Black-Scholes (calls/puts), term-structure
+          charts, scenario analysis, and clean UI.
+        </p>
+        <div class="card__links">
+          <a class="btn" href="https://github.com/YOUR-USERNAME/options-vol-calculator" target="_blank">Code</a>
+          <a class="btn btn--ghost" href="reports/iv.html">Demo</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-      <ul class="links">
-        <li><a href="mailto:you@example.com">you@example.com</a></li>
-        <li><a href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
+  <!-- ML & CLOUD -->
+  <section id="ml" class="wrap section">
+    <h2>Machine Learning & Cloud Systems</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="card__hdr">
+          <span class="badge">ML + AWS</span>
+          <span class="date">Jan 2025 – Present</span>
+        </div>
+        <h3>Stock Investment Model — ML Pipeline with AWS</h3>
+        <p>
+          Random Forest + time-series features; automated ETL, training, and
+          inference on AWS (SageMaker, Lambda). Backtests + daily retrains.
+        </p>
+        <ul class="bullets">
+          <li>Backtesting with walk-forward splits</li>
+          <li>Deployed model for scheduled predictions</li>
+          <li>Automated feature extraction & model retraining</li>
+        </ul>
+        <div class="card__links">
+          <a class="btn" href="https://github.com/YOUR-USERNAME/stock-ml-aws-pipeline" target="_blank">Code</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-      <p class="tiny">Hosted on GitHub Pages</p>
-    </aside>
+  <!-- DATA VIZ -->
+  <section id="viz" class="wrap section">
+    <h2>Data Visualization</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="card__hdr">
+          <span class="badge">Visualization</span>
+          <span class="date">Oct–Dec 2024</span>
+        </div>
+        <h3>Interactive 3D NBA Shot Chart</h3>
+        <p>
+          Flask + Plotly + Matplotlib to visualize any player’s shot chart with
+          3D animation, heat maps, and efficiency overlays (kernel smoothing).
+        </p>
+        <div class="card__links">
+          <a class="btn" href="https://github.com/yashjain12/3D-Interactive-NBA-shotchart" target="_blank">Code</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-    <!-- Right column -->
-    <section class="content">
-      <header class="intro">
-        <h2>Hi! Welcome to my GitHub.</h2>
-        <p class="edu"><strong>MS in Financial Mathematics</strong> — University of Chicago (expected 2026)</p>
-        <p class="edu"><strong>BS in Mathematics & Economics</strong> — Your Undergrad University</p>
-      </header>
+  <footer class="wrap footer">
+    <p>© <span id="y"></span> Your Name · Hosted on GitHub Pages</p>
+  </footer>
 
-      <section class="projects">
-        <h3>Projects</h3>
+  <!-- (Optional) README injection later — see notes below -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-        <article class="project">
-          <a class="project-title" href="https://github.com/yourusername/alpha-signal" target="_blank" rel="noopener">
-            Regime-Aware Alpha Signal & Cost-Aware Backtester
-          </a>
-          <p class="project-desc">
-            Fama-French factors + rolling OLS + regime clustering. Converts time-varying alpha into tradeable weights with
-            next-open execution and per-ticker cost model.
-          </p>
-          <ul class="tags">
-            <li>Python</li><li>CRSP</li><li>Fama-French</li><li>StatsModels</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <a class="project-title" href="https://github.com/yourusername/pairs-trading" target="_blank" rel="noopener">
-            Regime-Adaptive PCA Statistical Arbitrage
-          </a>
-          <p class="project-desc">
-            PCA basket construction with volatility-state gating and spread monitoring; robust entry/exit with transaction costs.
-          </p>
-          <ul class="tags">
-            <li>Python</li><li>PCA</li><li>Backtesting</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <a class="project-title" href="https://github.com/yourusername/iv-calc" target="_blank" rel="noopener">
-            Automated Implied Volatility Calculator
-          </a>
-          <p class="project-desc">
-            Black-Scholes IV solver (Newton) with greeks; batch jobs and CSV export for option chains.
-          </p>
-          <ul class="tags">
-            <li>Python</li><li>Options</li><li>Numerical Methods</li>
-          </ul>
-        </article>
-      </section>
-    </section>
-  </main>
+    // LATER: render README into a modal
+    // Example: load raw README.md → marked → .innerHTML
+    // async function loadReadme(user, repo, branch='main') {
+    //   const url = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/README.md`;
+    //   const md = await (await fetch(url)).text();
+    //   document.querySelector('#readme-modal .content').innerHTML = marked.parse(md);
+    //   document.getElementById('readme-modal').classList.add('open');
+    // }
+  </script>
 </body>
 </html>
