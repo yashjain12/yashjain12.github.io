@@ -1,51 +1,138 @@
-/* === Vertical projects stack (new block) === */
-.projects-vertical{
-  display:flex;
-  flex-direction:column;
-  gap:22px;
+:root {
+  --bg:#0b1020; 
+  --card:#121a31; 
+  --ink:#e8eefc; 
+  --muted:#9fb0d0;
+  --brand:#6db0ff; 
+  --accent:#6ef0c1; 
+  --border:#1e2743;
 }
 
-/* meta row above titles (label + year) */
-.card__meta{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:.25rem;
+* { box-sizing:border-box }
+html,body {
+  margin:0; padding:0; 
+  background:var(--bg); 
+  color:var(--ink); 
+  font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
 }
 
-/* “chip” matches your .badge look */
-.chip{
-  background:rgba(109,176,255,.14);
-  color:var(--brand);
-  padding:3px 8px;
-  border-radius:999px;
-  font-size:12px;
-  border:1px solid var(--border);
+a { color:var(--brand); text-decoration:none }
+.wrap { width:min(1100px,92%); margin:0 auto }
+
+/* Hero section */
+.hero {
+  display:grid; 
+  grid-template-columns:160px 1fr; 
+  gap:24px; 
+  align-items:center; 
+  padding:48px 0;
+}
+.avatar {
+  width:160px; height:160px; 
+  border-radius:18px; 
+  object-fit:cover; 
+  border:2px solid var(--border);
+}
+h1 { margin:0 0 8px }
+.subtitle { margin:0 0 6px; color:var(--muted) }
+.tagline { margin:0 12px 0 0; color:var(--ink) }
+.nav {
+  margin-top:12px; 
+  display:flex; gap:14px; 
+  flex-wrap:wrap;
+}
+.nav a {
+  padding:6px 10px; 
+  border:1px solid var(--border); 
+  border-radius:10px;
 }
 
-/* year on the right */
-.year{
-  color:var(--muted);
-  font-size:12px;
-  font-variant-numeric:tabular-nums;
-}
-
-/* section title alt class used by the new markup */
-.section__title{
+/* Sections */
+.section { padding-block:2.5rem }
+.section h2, .section__title {
   margin:0 0 14px;
   font-size:clamp(1.4rem,2.2vw,2rem);
 }
 
-/* card title in the new markup */
-.card__title{
-  margin:.5rem 0 .25rem;
-  font-size:20px; /* tweak to taste */
+/* Grid (for multi-projects) */
+.grid {
+  display:grid; 
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); 
+  gap:16px;
 }
 
-/* bullets for the project descriptions */
-.bullets{
-  margin:.5rem 0 0 1.15rem;
-  color:var(--muted);
-  line-height:1.45;
+/* Vertical layout (for stacked projects) */
+.projects-vertical {
+  display:flex; 
+  flex-direction:column; 
+  gap:22px;
 }
-.bullets li{ margin:.35rem 0; }
+
+/* Card */
+.card {
+  background:var(--card); 
+  border:1px solid var(--border); 
+  border-radius:16px; 
+  padding:20px 22px; 
+  display:flex; 
+  flex-direction:column; 
+  gap:10px;
+}
+
+/* Header/meta */
+.card__hdr, .card__meta {
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center;
+}
+.badge, .chip {
+  font-size:.85rem; 
+  padding:.25rem .6rem; 
+  border-radius:999px; 
+  background:rgba(109,176,255,.14); 
+  color:var(--brand);
+  border:1px solid var(--border);
+}
+.date, .year { color:var(--muted); font-size:12px; font-variant-numeric:tabular-nums }
+
+/* Titles + bullets */
+.card h3, .card__title {
+  margin:.5rem 0 .25rem; 
+  font-size:clamp(1.05rem,1.6vw,1.25rem);
+}
+.bullets {
+  margin:.5rem 0 0; 
+  padding-left:1.15rem; 
+  color:var(--muted);
+}
+.bullets li { margin:.35rem 0; line-height:1.45 }
+
+/* Links/buttons */
+.card__links { display:flex; gap:8px; margin-top:auto }
+.btn {
+  background:var(--brand); 
+  color:#081427; 
+  padding:8px 12px; 
+  border-radius:10px; 
+  font-weight:600;
+}
+.btn--ghost {
+  background:transparent; 
+  border:1px solid var(--border); 
+  color:var(--ink);
+}
+
+/* Footer */
+.footer {
+  padding:28px 0 48px; 
+  color:var(--muted); 
+  text-align:center; 
+  border-top:1px solid var(--border); 
+  margin-top:30px;
+}
+
+/* Responsive */
+@media (max-width:640px) {
+  .hero { grid-template-columns:1fr; justify-items:center; text-align:center }
+  .nav { justify-content:center }
+}
