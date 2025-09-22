@@ -6,6 +6,11 @@
   <title>Yash Jain</title>
   <link rel="stylesheet" href="style.css" />
   <!-- (Optional) later if you want README rendering, uncomment marked below -->
+  <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
   <!-- <script src="https://cdn. jsdelivr.net/npm/marked/marked.min.js"></script> -->
 </head>
 <body>
@@ -28,42 +33,56 @@
   <!-- QUANT FINANCE -->
 <!-- QUANT FINANCE -->
 <section id="quant" class="section">
-  <h2 class="section__title">Quant Finance &amp; Portfolio Research</h2>
+  <div class="wrap">
+    <h2 class="section__title">Quant Finance &amp; Portfolio Research</h2>
 
-  <div class="projects-vertical">
-    <!-- Project 1 -->
-    <article class="card">
-      <div class="card__meta">
-        <span class="chip">Factor Models</span>
-        <span class="year">2025</span>
-      </div>
-      <h3 class="card__title">Fama–French Alpha Signal Generation</h3>
-      <ul class="bullets">
-        <li>Built an alpha signal using the Fama–French 5-Factor model, applying a Bayesian process with time-varying estimates of risk exposures (betas) and outperformance (alpha); categorized signals among market regimes.</li>
-        <li>Designed a pipeline to turn model alpha signals into portfolio trades, including realistic transaction cost modeling.</li>
-        <li>Backtested the strategy from 2014–2025 by dynamically allocating portfolio weights to U.S. equities from alpha signals, achieving an 8.5% annual growth rate; applies MCMC for evolving alpha estimates across market regimes.</li>
-      </ul>
+    <div class="projects-vertical">
+      <!-- Project 1 -->
+      <article class="card">
+        <div class="card__meta">
+          <span class="chip">Factor Models</span>
+          <span class="year">2025</span>
+        </div>
+        <h3 class="card__title">Fama–French Alpha Signal Generation</h3>
+        <div class="equation">
+    $$R_{it} - R_{ft} = \alpha_{it}
+      + \beta_{1}(R_{mt}-R_{ft}) + \beta_{2}SMB_{t}
+      + \beta_{3}HML_{t} + \beta_{4}RMW_{t}
+      + \beta_{5}CMA_{t} + \varepsilon_{t}$$
+  </div>
+
+        <ul class="bullets">
+          <li>Built an alpha signal using the Fama–French 5-Factor model, applying a Bayesian process with time-varying estimates of risk exposures (betas) and outperformance (alpha); categorized signals among market regimes.</li>
+          <li>Designed a pipeline to turn model alpha signals into portfolio trades, including realistic transaction cost modeling.</li>
+          <li>Backtested the strategy from 2014–2025 by dynamically allocating portfolio weights to U.S. equities from alpha signals, achieving an 8.5% annual growth rate; applies MCMC for evolving alpha estimates across market regimes.</li>
+        </ul>
         <div class="card__links">
           <a class="btn" href="https://github.com/yashjain12/FamaFrenchPortfolioConstruction" target="_blank">Code + Results</a>
         </div>
-    </article>
+      </article>
 
-    <!-- Project 2 -->
-    <article class="card">
-      <div class="card__meta">
-        <span class="chip">Derivatives</span>
-        <span class="year">2025</span>
-      </div>
-      <h3 class="card__title">Implied Volatility Calculator for Options</h3>
-      <ul class="bullets">
-        <li>Implemented Black-Scholes European call option pricing and calculated higher-order Greeks (vega, volga, and ultima) to calculate implied volatility using Newton’s method and create volatility surface curves.</li>
-        <li>Automated web scraping of live market data with Selenium and asynchronous execution via ThreadPoolExecutor.</li>
-        <li>Enhanced root-finding using a third-order Taylor expansion to address convergence and zero-division edge cases.</li>
-      </ul>
+      <!-- Project 2 -->
+      <article class="card">
+        <div class="card__meta">
+          <span class="chip">Derivatives</span>
+          <span class="year">2025</span>
+        </div>
+        <h3 class="card__title">Implied Volatility Calculator for Options</h3>
+        <div class="equation">
+    $$\frac{\partial V}{\partial t}
+      + \frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}V}{\partial S^{2}}
+      + rS\frac{\partial V}{\partial S} - rV = 0$$
+  </div>
+  <ul class="bullets">
+          <li>Implemented Black-Scholes European call option pricing and calculated higher-order Greeks (vega, volga, and ultima) to calculate implied volatility using Newton’s method and create volatility surface curves.</li>
+          <li>Automated web scraping of live market data with Selenium and asynchronous execution via ThreadPoolExecutor.</li>
+          <li>Enhanced root-finding using a third-order Taylor expansion to address convergence and zero-division edge cases.</li>
+        </ul>
         <div class="card__links">
           <a class="btn" href="https://github.com/yashjain12/ImpliedVolatilityCalc" target="_blank">Code + Results</a>
         </div>
-    </article>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -85,6 +104,8 @@
           <li>Deployed the trained Random Forest model on AWS SageMaker to automate predictions and model retraining.</li>
           <li>Automated daily data retrieval, feature extraction, and model inference to ensure real-time decision-making using Lambda functions.
 </li>
+          <li>Deployed model for scheduled predictions</li>
+          <li>Automated feature extraction & model retraining</li>
         </ul>
       </article>
     </div>
